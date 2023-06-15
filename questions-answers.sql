@@ -4,7 +4,6 @@ FROM publisher p
          JOIN game g on p.publisher_id = g.publisher_id;
 
 # Get copies by publisher
-
 SELECT p.name, SUM(g.copies) sum
 FROM publisher p
          JOIN game g on p.publisher_id = g.publisher_id
