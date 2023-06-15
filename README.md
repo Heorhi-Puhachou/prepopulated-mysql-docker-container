@@ -15,10 +15,10 @@ docker run -d -p 3306:3306 --rm --name test-mysql-container prepopulated-db-imag
 
 Check data in DB
 ```
-docker run -it --rm --link test-mysql-container mysql:latest mysql -htest-mysql-container -uroot -proot myexample -e "select * from mytable;"
+docker run -it --rm --link test-mysql-container mysql:latest mysql -htest-mysql-container -uroot -proot myexample -e "select * from game;"
 ```
 
-You connect to inner console and work with data
+You can connect to inner console and work with data
 ```
 docker exec -it test-mysql-container bash
 ```

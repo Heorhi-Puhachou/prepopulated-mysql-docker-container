@@ -5,8 +5,8 @@ USE myexample;
 CREATE TABLE game
 (
     game_id      int AUTO_INCREMENT primary key NOT NULL,
-    publisher_id int NOT NULL,
-    name         varchar(255),
+    publisher_id int          NOT NULL,
+    name         varchar(255) NOT NULL,
     release_date DATE
 );
 
@@ -22,3 +22,10 @@ VALUES ('Doom',
        ('Legend of Zelda',
         2,
         '20191201');
+
+CREATE TABLE publisher
+(
+    publisher_id int AUTO_INCREMENT primary key NOT NULL,
+    name         varchar(255) NOT NULL,
+    rating       int          NOT NULL
+);
