@@ -15,3 +15,8 @@ FROM publisher p
          JOIN game g on p.publisher_id = g.publisher_id
 GROUP BY p.name
 HAVING sum > 110000;
+
+# Window function that aggregate copies (total_copies)
+SELECT game_id, name, copies,
+       SUM(copies) OVER(ORDER BY game_id) AS 'total_copies'
+FROM game;
