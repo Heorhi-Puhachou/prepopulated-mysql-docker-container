@@ -13,6 +13,11 @@ Start container from image
 docker run -d -p 3306:3306 --rm --name test-mysql-container prepopulated-db-image
 ```
 
+After all preparation steps you can start DB by docker compose
+```
+docker compose up
+```
+
 Check data in DB
 ```
 docker run -it --rm --link test-mysql-container mysql:latest mysql -htest-mysql-container -uroot -proot myexample -e "select * from game;"
