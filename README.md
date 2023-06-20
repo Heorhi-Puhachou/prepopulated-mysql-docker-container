@@ -10,11 +10,6 @@ docker build --tag prepopulated-db-image .
 
 Start container from image
 ```
-docker run -d -p 3306:3306 --rm --name test-mysql-container prepopulated-db-image
-```
-
-After all preparation steps you can start DB by docker compose
-```
 docker compose up
 ```
 
